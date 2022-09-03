@@ -1,13 +1,23 @@
 package Model;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Level {
 
     private Field [][] _map = new Field[10][10];
     private boolean _isFinished;
-    private MoveableObject[] _boxes;
-
+    private List<MoveableObject> _boxes;
     public Level (){
 
+        for (Field[] row: _map)
+        {
+            Arrays.fill(row,new Field());
+        }
+
+        _boxes = new ArrayList<>();
+        _isFinished = false;
     }
 
     public Field[][] GetMap(){
@@ -22,7 +32,7 @@ public class Level {
         _isFinished = isFinished;
     }
 
-    public MoveableObject[] GetBoxes(){
+    public List<MoveableObject> GetBoxes(){
         return _boxes;
     }
 

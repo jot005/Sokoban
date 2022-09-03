@@ -3,7 +3,8 @@ package Model;
 public class Field {
     private FieldType _type;
 
-    public Field (){
+    public Field ()
+    {
         _type = FieldType.Empty;
     }
     public Field(FieldType type){

@@ -9,10 +9,12 @@ public class Player extends MoveableObject {
     }
 
     public WalkDirection GetWalkDirection (){
+
         return _walkDirection;
     }
 
     public void SetWalkdirection (WalkDirection walkDirection){
+
         _walkDirection = walkDirection;
     }
 
