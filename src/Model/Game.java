@@ -8,16 +8,17 @@ public class Game {
     private Level _currentLevel;
     private Settings _settings;
     private Player _player;
-
     public Game (){
 
     _player = new Player();
     _settings = new Settings();
     CreateLevels();
+
     }
 
     private void CreateLevels(){
 
+        _settings.GetGamePath();
     }
 
     public Level GetCurrentLevel(){
